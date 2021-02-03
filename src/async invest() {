@@ -1,0 +1,75 @@
+async invest() {
+    this.refadd = window.location?.search.split('=')[1];
+    if (!this.refadd) {
+      // console.log(true)
+      this.refadd = this.owner;
+    }
+
+    var inputValue = document.getElementById('invest')['value'];
+    console.log(inputValue);
+
+    if (global.tronWeb && global.tronWeb.defaultAddress.base58) {
+      var tronWeb = global.tronWeb;
+      try {
+        if (false) {
+          this.toastr.warning('Low Balance');
+        } else {
+          await this.contract
+            .join(this.refadd)
+            .send({
+              feeLimit: 100_000_000,
+              // callValue: tronWeb.toHex(tronWeb.toSun(1000)),
+              callValue: tronWeb.toSun(inputValue),
+            })
+            .then(
+              (output) => {
+                this.toastr.success('Deposit Successfull!');
+                setTimeout(() => {
+                  this.refresh();
+                }, 2000);
+              },
+              (error) => {
+                this.toastr.error(error);
+              }
+            );
+        }
+      } catch (err) {
+        if (JSON.parse(JSON.stringify(err)).reason == 'invalid address') {
+          this.toastr.error('Invalid Referrer Address!');
+        } else {
+          this.toastr.error('Network Error!');
+        }
+      }
+    } else {
+      this.toastr.error('Please switch to Mainnet');
+    }
+  }
+  async withdraw() {
+    this.amount = 0;
+    if (global.tronWeb && global.tronWeb.defaultAddress.base58) {
+      try {
+        if (false) {
+          this.toastr.warning('Low Balance!');
+        } else {
+          await this.contract
+            .withDraw()
+            .send({
+              feeLimit: 100_000_000,
+              callValue: 0,
+            })
+            .then((output) => {
+              if (output) {
+                this.toastr.success('Withdraw Successfull!');
+                setTimeout(() => {
+                  this.refresh();
+                }, 2000);
+              }
+            });
+        }
+      } catch (err) {
+        this.toastr.error('Your investment is less than 7 days');
+      }
+    } else {
+      this.toastr.error(`Please switch to ${environment.nodeName1}`);
+    }
+  }

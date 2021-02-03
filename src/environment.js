@@ -1,0 +1,42 @@
+export const environment = {
+  production: true,
+  // baseUrl: 'https://tronforever.live',
+  baseUrl: 'http://localhost:3000',
+  // nodeName1: 'Mainnet (trongrid)',
+  // nodeName2: 'Mainnet (tronstack)',
+  nodeName2: 'Shasta Testnet',
+  // fullnode: 'https://api.trongrid.io',
+  // solidityNode: 'https://api.trongrid.io',
+  // eventServer: 'https://api.trongrid.io',
+  fullnode: 'https://api.shasta.trongrid.io',
+  solidityNode: 'https://api.shasta.trongrid.io',
+  eventServer: 'https://api.shasta.trongrid.io',
+  // defaultRefAddress: 'TSPUKTyGbzKEgU5dLp6XukZbApGQnqdLJR',
+  // contractAddress: 'TVtXqBfiQNmYngss3LU99g3ANKvbjP97C2',
+  // telegramLink: 'https://t.me/tronbrun',
+  // contractLink:'https://tronscan.org/#/contract/TVtXqBfiQNmYngss3LU99g3ANKvbjP97C2/code',
+    // defaultRefAddress: 'TL8ZxcUKJNBRwCCMgb1jNVTvqGaTWoweos',
+    defaultRefAddress:'TTDKQAFBuRg52wC6dtrnnMti7HTNjqCo1v',
+    // contractAddress: 'TCKrGJK6zko1vmUic8SGdU3bcSkWUrH9tP',
+    // contractLink: 'https://shasta.tronscan.org/#/contract/TCKrGJK6zko1vmUic8SGdU3bcSkWUrH9tP/code',
+    contractAddress: 'TMdcShLwhjMZRMAzD6er4vxAXizHgDkxCM',
+    contractLink: 'https://shasta.tronscan.org/#/contract/TMdcShLwhjMZRMAzD6er4vxAXizHgDkxCM/code',
+};
+
+//test net
+// export const environment = {
+//   production: true,
+//   baseUrl: "http://localhost:4200/",
+//   nodeName1: "Shasta Testnet",
+//   nodeName2: "Shasta Testnet",
+//   fullnode: "https://api.shasta.trongrid.io",
+//   solidityNode: "https://api.shasta.trongrid.io",
+//   eventServer: "https://api.shasta.trongrid.io",
+//   // defaultRefAddress: 'TEuo8z1i3k3pKsmrP1Hx9PVbczzeTyw5nU',
+//   defaultRefAddress: "TKACovBPFcAiyzwJprjY96fc4fo8wJs1Kv",
+//   // contractAddress: 'THzXYenoaiap47c1kNLh9hrNcjziZo2FNu',
+//   telegramLink: "https://t.me/tronbrun",
+//   contractAddress: "TDthycBeXZK4Cw5qJzPtXZE3E9uhYXV7NU",
+//   contractLink:
+//     "https://shasta.tronscan.org/#/contract/TDthycBeXZK4Cw5qJzPtXZE3E9uhYXV7NU/code",
+// };

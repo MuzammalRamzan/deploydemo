@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <meta name="theme-color" content="#000000" /> -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+    <title>Tronforever | Investment platform based on TRX blockchain</title>
+    <meta name="description" content="Investment platform based on TRX blockchain smart-contract technology. Get +225% up to your deposit right now. Safe and legit!" />
+    <meta name="keywords" content="tron, trx, dapp, investment, hyip, blockchain, smart-contract, smart contract, Tronforever, tronforever.live, investment platform, profit, earnings, passive earnings" />
+
+    <meta name="og:locale" content="en-US">
+    <meta name="og:site_name" content="tronforever.live">
+    <meta name="og:title" content="tronforever.live - investment platform based on TRX blockchain">
+    <meta name="og:description" content="tronforever.live - investment platform based on TRX blockchain smart-contract technology. Get +225% up to your deposit right now. Safe and legit!">
+    <meta name="og:url" content="index.html">
+    <meta name="og:image" content="img/social.jpg">
+    <link href="index.html" rel="canonical" />
+
+    <!-- <link rel="shortcut icon" type="image/png" href="img/fav/favicon16.png" sizes="16x16">
+    <link rel="shortcut icon" type="image/png" href="img/fav/favicon32.png" sizes="32x32">
+    <link rel="shortcut icon" type="image/png" href="img/fav/favicon64.png" sizes="64x64">
+    <link rel="shortcut icon" type="image/png" href="img/fav/favicon96.png" sizes="96x96">
+    <link rel="shortcut icon" type="image/png" href="img/fav/favicon180.png" sizes="180x180"> -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
+    <link rel="android-touch-icon" sizes="180x180" href="img/fav/android-touch-icon.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/fontawesome/css/all.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/stylea028.css?v=2.36" rel="stylesheet">
+    <link href="css/animation.css" rel="stylesheet">
+    <link href="css/adaptive7974.css?v=2.16" rel="stylesheet">
+
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+
+    <!-- <title>React App</title> -->
+<!-- Script tags -->
+<script src="js/jquery-3.3.1.min.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175172407-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-175172407-1');
+    </script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/remodal.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script>
+    window.counter = function() {
+        var span = this.querySelector('span');
+        var current = parseInt(span.textContent);
+        span.textContent = current + 1;
+    };
+    document.addEventListener('DOMContentLoaded', function() {
+        var trigger = new ScrollTrigger({
+            addHeight: true
+        });
+    });
+    </script>
+    <script>
+    function animateNumbers() {
+        var num = $(".totalsumnum");
+        num.each(function(indx, el) {
+            var max = $(el).data("max");
+            var duration = 3000;
+            var visibility = checkViewport(el);
+            $(el).on("animeNum", function() {$({n: 0}).animate({n: max}, {easing: "linear",duration: duration,step: function(now, fx) {$(el).html(now | 0)}})}).data("visibility", visibility);
+            visibility && $(el).trigger("animeNum")
+        });
+    
+        function checkViewport(el) {
+            var H = document.documentElement.clientHeight,
+                h = el.scrollHeight,
+                pos = el.getBoundingClientRect();
+            return pos.top + h > 0 && pos.bottom - h < H
+        }
+        $(window).scroll(function() {
+            num.each(function(indx, el) {
+                var visibility = checkViewport(el);
+                el = $(el);
+                var old = el.data("visibility");
+                old != visibility && el.data("visibility", visibility) && !old && el.trigger("animeNum")
+            })
+        })
+    }
+    $(function() {
+        animateNumbers();
+    });
+    </script>
+    <script>
+    $(document).ready(function() {
+        $("a.scrollto").click(function() {
+            var elementClick = $(this).attr("href")
+            var destination = $(elementClick).offset().top;
+            jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
+            return false;
+        });
+    });
+    </script>
+    <script src="js/easing.js" type="text/javascript"></script>
+    <script src="js/jquery.ui.totop.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $().UItoTop({
+            easingType: 'easeOutQuart'
+        });
+    });
+    </script>
+    
+    <script src="js/clipboard.min.js"></script>
+    <script>
+    var contractAddress = 'TWiti6GpPJPRXtCFKURdTtxN7UEcurQoeS';
+    var userReferer = 'No upline';
+    var refererDefault = 'T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb';
+    var language = 'en';
+    </script>
+    <script src="js/site.min42ec.js?v=0.366" type="text/javascript"></script>
+      
+</head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
